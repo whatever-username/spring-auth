@@ -21,7 +21,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "users")
 public class User implements UserDetails {
 
   @Id
@@ -31,6 +31,8 @@ public class User implements UserDetails {
   private String lastname;
   private String email;
   private String password;
+
+  private String telegramId;
 
   @Enumerated(EnumType.STRING)
   private Role role;
